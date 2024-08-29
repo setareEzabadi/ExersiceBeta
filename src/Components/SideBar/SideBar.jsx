@@ -1,56 +1,71 @@
 import logo from '../../Assets/img/Logo Zarvantrip.png';
+import dashboard from '../../Assets/img/dashboard.png';
+import rezerv from '../../Assets/img/rezerv.png';
+import money from '../../Assets/img/moneyy.png';
+import ticket from '../../Assets/img/tikcet.png';
+import customer from '../../Assets/img/customer.png';
+import fave from '../../Assets/img/fave.png';
+import mine from '../../Assets/img/mine.png';
+import profile from '../../Assets/img/profile.png';
 
 const SideBar = () => {
     return (
         <div className="bg-white h-full w-64 shadow-md flex flex-col p-4">
             {/* Header */}
-            <div className="flex items-center justify-center py-4 border-b">
-                <img src={logo} alt="Logo" className="w-12 h-12" />
-                <span className="text-xl font-bold ml-2">ZARVANTRIP</span>
+            <div className="flex flex-col items-center justify-center py-4 border-b">
+                <img src={logo} alt="Logo" className="w-[98px] h-[102px] mb-2" />
+                <span className="text-[#343434] text-[20px] font-bold">ZARVANTRIP</span>
             </div>
 
             {/* Menu Items */}
-            <nav className="flex-1 mt-4">
-                <ul>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-tachometer-alt mr-3"></i> داشبورد
+            <nav className="flex-1 mt-[30px] mb-[197px]">
+                <ul className="flex flex-col gap-[20px]">
+                    {/* Dashboard Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={dashboard} alt="Dashboard Icon" className="w-[35px] h-[35px]" /> داشبورد
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-list mr-3"></i> لیست رزرو من
+                    {/* Reservations List Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={rezerv} alt="Reservations Icon" className="w-[35px] h-[35px]" /> لیست رزرو من
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-wallet mr-3"></i> بخش مالی
+                    {/* Financial Section Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[16px] font-bold cursor-pointer rounded-md bg-[#262630] text-white">
+                        <img src={money} alt="Money Icon" className="w-[35px] h-[35px]" /> بخش مالی
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-ticket-alt mr-3"></i> مدیریت تیکت‌ها
+                    {/* Ticket Management Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={ticket} alt="Tickets Icon" className="w-[35px] h-[35px]" /> مدیریت تیکت‌ها
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-users mr-3"></i> باشگاه مشتریان
+                    {/* Customer Club Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={customer} alt="Customer Club Icon" className="w-[35px] h-[35px]" /> باشگاه مشتریان
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-heart mr-3"></i> علاقه‌مندی‌های من
+                    {/* Favorites Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={fave} alt="Favorites Icon" className="w-[35px] h-[35px]" /> علاقه‌مندی‌های من
                     </li>
-                    <li className="flex items-center p-2 mb-4 text-gray-700 hover:bg-gray-100 cursor-pointer rounded-md">
-                        <i className="fas fa-users mr-3"></i> مسافران من
+                    {/* My Passengers Item */}
+                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                        <img src={mine} alt="My Passengers Icon" className="w-[35px] h-[35px]" /> مسافران من
                     </li>
                 </ul>
             </nav>
 
             {/* Footer */}
-            <div className="flex items-center p-2 border-t mt-4">
+            <div className="flex flex-col items-center bg-[#D7D7D7] py-[13px] px-[32px] rounded-lg gap-[7px] mt-4">
                 <img
-                    src="https://via.placeholder.com/40"
+                    src={profile}
                     alt="User"
-                    className="rounded-full w-10 h-10"
+                    className="rounded-full w-[35px] h-[35px]"
                 />
-                <div className="ml-3">
-                    <p className="text-sm font-semibold">ابوالفضل عزیز</p>
-                    <p className="text-xs text-gray-600">AbyariZarvan@gmail.com</p>
-                </div>
-                <button className="ml-auto text-red-600 hover:text-red-800">
-                    خروج
-                </button>
+                <p className="text-[#343434] text-[14px] font-bold">ابوالفضل عزیز</p>
+                <p className="text-[#343434] text-[14px] font-bold">AbyariZarvan@gmail.com</p>
             </div>
+
+            {/* Logout Button */}
+            <button className="w-full bg-[#FF2B2B] text-white py-[12px] mt-2 rounded">
+                خروج
+            </button>
         </div>
     );
 };
