@@ -12,15 +12,17 @@ const Header = () => {
             <div className="flex items-center gap-6">
 
                 {/* Profile Section */}
-                <div className="flex items-center bg-[#E8E8E8] px-4 rounded-lg h-[55px] gap-[15px]">
-                    <img src={profile} alt="Profile" className="w-8 h-8 rounded-full mr-2" />
-                    <span className="text-sm font-semibold text-gray-700">ابوالفضل عزیز خوش آمدی</span>
+                <div className="flex items-center bg-[#E8E8E8] px-4 rounded-lg h-[55px] gap-[26px]">
+                    <div className="flex items-center gap-[15px]">
+                        <img src={profile} alt="Profile" className="w-8 h-8 rounded-full mr-2" />
+                        <span className="text-[#727272] text-[14px] font-bold">ابوالفضل عزیز خوش آمدی</span>
+                    </div>
                     <img src={arrow} alt="Dropdown Arrow" className="w-5 h-5 ml-2" />
                 </div>
 
                 {/* Balance Section */}
                 <div className="flex items-center bg-[#E8E8E8] px-4 rounded-lg h-[55px]">
-                    <span className="text-sm font-semibold text-gray-700 ml-2">21,265,000 تومان</span>
+                    <span className="text-[#727272] text-[14px] font-bold ml-2">21,265,000 تومان</span>
                     <img src={wallet} alt="Wallet" className="w-6 h-6" />
                 </div>
 
@@ -31,7 +33,7 @@ const Header = () => {
 
                 {/* Return to Website Button */}
                 <button className="flex items-center bg-[#FF2B2B] text-white px-4 rounded-lg h-[55px]">
-                    <span className="ml-2">برگشت به وبسایت</span>
+                    <span className="ml-2 text-[14px] font-bold">برگشت به وبسایت</span>
                     <img src={logOut} alt="Return Arrow" className="w-5 h-5" />
                 </button>
 
