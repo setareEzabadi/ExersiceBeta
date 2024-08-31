@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import cardImage from '../../Assets/img/cardImage.png';
 import check from '../../Assets/img/check.png';
 import date from '../../Assets/img/date.png';
 import copy from '../../Assets/img/copy.png';
 
 const Wallet = () => {
+    const inputRefs = useRef([]);
+    const [inputValues, setInputValues] = useState(Array(24).fill(''));
+
+    const handleInputChange = (e, index) => {
+        const { value } = e.target;
+        const updatedValues = [...inputValues];
+        updatedValues[index] = value;
+        setInputValues(updatedValues);
+
+        if (value && index > 0) {
+            inputRefs.current[index - 1].focus();
+        }
+    };
+
     return (
         <>
             <div className="flex items-center justify-center gap-7 p-4">
@@ -107,6 +121,47 @@ const Wallet = () => {
                         </div>
                         <button className="absolute right-0 flex items-center justify-center w-[265px] h-[60px] bg-[#FF2A2A] text-white text-[14px] font-bold rounded-md">
                             4 رقم آخر شماره کارت وارد نمایید
+                        </button>
+                    </div>
+                </div>
+
+                <div className="p-4 flex flex-col items-center gap-4">
+                    <div className="flex items-center justify-between w-[1010px] h-[60px] bg-[#F1F1F1] rounded-md p-2">
+                        <div className="w-[313px] h-[60px] bg-[#565662] flex items-center justify-center rounded-md text-white text-[14px]">
+                            24 رقم شماره شبا کارت بانکی خود را وارد نمایید
+                        </div>
+
+                        <div className="flex flex-1 gap-[30px] justify-center items-baseline">
+                            {[...Array(6)].map((_, groupIndex) => (
+                                <div key={groupIndex} className="flex gap-[5px]">
+                                    {[...Array(4)].map((_, index) => (
+                                        <input
+                                            key={index}
+                                            maxLength={1}
+                                            ref={(el) => (inputRefs.current[groupIndex * 4 + index] = el)}
+                                            onChange={(e) =>
+                                                handleInputChange(e, groupIndex * 4 + index)
+                                            }
+                                            value={inputValues[groupIndex * 4 + index]}
+                                            className={`w-[14px] h-[20px] bg-transparent text-center font-bold outline-none ${inputValues[groupIndex * 4 + index]
+                                                ? 'border-none'
+                                                : 'border-b-2 border-[#D9D9D9]'
+                                                } focus:border-[#FF2A2A] text-black`}
+                                        />
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="w-[65px] h-[60px] bg-[#262630] flex items-center justify-center rounded-md text-white text-[14px]">
+                            IR
+                        </div>
+                    </div>
+
+                    {/* Updated Position of Submit Button */}
+                    <div className="mt-2 w-[1020px] flex justify-start mr-3">
+                        <button className="w-[130px] h-[60px] bg-[#1FBC42] text-white text-[12px] font-bold rounded-md">
+                            ارسال اطلاعات
                         </button>
                     </div>
                 </div>
