@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: VazirUI;
+  src: url("../src/Assets/Font/vazir-font-v27.2.2-Fontjo.com/vazir-font-v27.2.2-Fontjo.com/UI/Vazir-Black-UI.eot");
+}
+
+*{
+  font-family: VazirUI !important;
+}
+
 html {
   direction: rtl;
 }
