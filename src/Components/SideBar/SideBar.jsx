@@ -35,8 +35,8 @@ const SideBar = () => {
             </div>
 
             {/* Menu Items */}
-            <nav className="flex-1 mt-[30px] mb-[197px]">
-                <ul className="flex flex-col gap-[20px]">
+            <nav className="flex-1 mt-[15px] mb-[15px]">
+                <ul className="flex flex-col gap-[5px]">
                     {/* Dashboard Item */}
                     <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={dashboard} alt="Dashboard Icon" className="w-[35px] h-[35px]" /> داشبورد
@@ -51,6 +51,9 @@ const SideBar = () => {
                         onClick={toggleFinancialSection}
                     >
                         <img src={money} alt="Money Icon" className="w-[35px] h-[35px]" /> بخش مالی
+                        <div className="flex justify-end w-[80px]">
+                            <img src={arowDown} alt="Arrow Down" className="w-[20px] h-[20px]" />
+                        </div>
                     </li>
                     {/* Financial Submenu */}
                     <div
@@ -58,7 +61,7 @@ const SideBar = () => {
                         className="transition-height duration-500 ease-out overflow-hidden"
                         style={{ height: sectionHeight }}
                     >
-                        <div className="bg-[#262630] w-full rounded-xl px-3 py-4">
+                        <div className="bg-[#262630] w-full rounded-xl px-3 py-4 flex flex-col">
                             <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">شارژ کیف پول</li></a>
                             <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">کارت به کارت</li></a>
                             <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">برداشت وجه</li></a>
