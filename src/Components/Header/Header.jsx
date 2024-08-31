@@ -1,8 +1,10 @@
+import React from 'react';
 import profile from '../../Assets/img/profile.png';
 import arrow from '../../Assets/svg/arrow-square-down.svg';
 import wallet from '../../Assets/svg/empty-wallet.svg';
 import logOut from '../../Assets/svg/logout.svg';
 import message from '../../Assets/svg/notification-status.svg';
+import menu from '../../Assets/img/menue.png';
 
 const Header = () => {
     return (
@@ -11,13 +13,18 @@ const Header = () => {
             {/* Right Side: Balance and Profile */}
             <div className="flex items-center gap-6">
 
-                {/* Profile Section */}
-                <div className="flex items-center bg-[#E8E8E8] px-4 rounded-lg h-[55px] gap-[26px]">
+                {/* Profile Section - Hidden on md and smaller */}
+                <div className="hidden md:flex items-center bg-[#E8E8E8] px-4 rounded-lg h-[55px] gap-[26px]">
                     <div className="flex items-center gap-[15px]">
                         <img src={profile} alt="Profile" className="w-8 h-8 rounded-full mr-2" />
                         <span className="text-[#727272] text-[14px] font-bold">ابوالفضل عزیز خوش آمدی</span>
                     </div>
                     <img src={arrow} alt="Dropdown Arrow" className="w-5 h-5 ml-2" />
+                </div>
+
+                {/* Responsive Menu - Hidden on md and larger */}
+                <div className="md:hidden flex items-center justify-center w-[50px] h-[50px] bg-[#262630] rounded-xl">
+                    <img src={menu} alt='menu' className="w-[24px] h-[24px]" />
                 </div>
 
                 {/* Balance Section */}
@@ -33,7 +40,7 @@ const Header = () => {
 
                 {/* Return to Website Button */}
                 <button className="flex items-center bg-[#FF2B2B] text-white px-4 rounded-lg h-[55px]">
-                    <span className="ml-2 text-[14px] font-bold">برگشت به وبسایت</span>
+                    <span className="ml-2 text-[14px] font-bold md:block hidden">برگشت به وبسایت</span>
                     <img src={logOut} alt="Return Arrow" className="w-5 h-5" />
                 </button>
 
