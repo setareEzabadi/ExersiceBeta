@@ -26,7 +26,7 @@ const Wallet = () => {
                 <img
                     src={cardImage}
                     alt="Card"
-                    className="rounded-md shadow-lg w-[527px] h-[279px]"
+                    className="rounded-xl shadow-lg w-[527px] h-[279px]"
                 />
 
                 {/* Button Section */}
@@ -42,14 +42,14 @@ const Wallet = () => {
                     {/* Unselected Buttons */}
                     <button className="flex items-center justify-between w-[454px] h-[78px] bg-[#F1F1F1] text-[#C4C4C4] text-[16px] font-bold rounded-2xl px-4">
                         <span className="flex items-center gap-2">
-                            <div className="w-[30px] h-[30px] bg-[#D1D1D1] rounded-md"></div>
+                            <div className="w-[30px] h-[30px] bg-[#D1D1D1] rounded-xl"></div>
                             انتخاب شماره کارت حقوقی
                         </span>
                     </button>
 
                     <button className="flex items-center justify-between w-[454px] h-[78px] bg-[#F1F1F1] text-[#C4C4C4] text-[16px] font-bold rounded-2xl px-4">
                         <span className="flex items-center gap-2">
-                            <div className="w-[30px] h-[30px] bg-[#D1D1D1] rounded-md"></div>
+                            <div className="w-[30px] h-[30px] bg-[#D1D1D1] rounded-xl"></div>
                             انتخاب شماره کارت دلخواه
                         </span>
                     </button>
@@ -62,19 +62,19 @@ const Wallet = () => {
                     <input
                         type="text"
                         placeholder="* شماره پیگیری خود را وارد نمایید"
-                        className="w-[313px] h-[60px] bg-[#F1F1F1] text-[#C4C4C4] text-[14px] font-bold rounded-md px-4 focus:outline-none focus:border-[1.5px] focus:border-[#FF2A2A]"
+                        className="w-[313px] h-[60px] bg-[#F1F1F1] text-[#C4C4C4] text-[14px] font-bold rounded-xl px-4 focus:outline-none focus:border-[1.5px] focus:border-[#FF2A2A]"
                     />
 
                     {/* Amount Input */}
                     <input
                         type="text"
                         placeholder="* مبلغ مد نظر خود را وارد نمایید"
-                        className="w-[313px] h-[60px] bg-[#F1F1F1] text-[#C4C4C4] text-[14px] font-bold rounded-md px-4 focus:outline-none focus:border-[1.5px] focus:border-[#FF2A2A]"
+                        className="w-[313px] h-[60px] bg-[#F1F1F1] text-[#C4C4C4] text-[14px] font-bold rounded-xl px-4 focus:outline-none focus:border-[1.5px] focus:border-[#FF2A2A]"
                     />
 
                     {/* Date Input */}
-                    <div className="relative flex items-center w-[313px] h-[60px] bg-[#F1F1F1] rounded-md">
-                        <div className="absolute left-0 top-0 flex items-center justify-center w-[60px] h-[60px] bg-[#262630] rounded-md">
+                    <div className="relative flex items-center w-[313px] h-[60px] bg-[#F1F1F1] rounded-xl">
+                        <div className="absolute left-0 top-0 flex items-center justify-center w-[60px] h-[60px] bg-[#262630] rounded-xl">
                             <img src={date} alt="Date Icon" className="w-[30px] h-[30px]" />
                         </div>
                         <input
@@ -88,8 +88,8 @@ const Wallet = () => {
                 {/* Bottom Input Section */}
                 <div className="flex gap-3 items-center">
                     {/* Upload Comment Input */}
-                    <div className="relative flex items-center w-[313px] h-[60px] bg-[#F1F1F1] rounded-md">
-                        <div className="absolute left-0 top-0 flex items-center justify-center w-[60px] h-[60px] bg-[#262630] rounded-md">
+                    <div className="relative flex items-center w-[313px] h-[60px] bg-[#F1F1F1] rounded-xl">
+                        <div className="absolute left-0 top-0 flex items-center justify-center w-[60px] h-[60px] bg-[#262630] rounded-xl">
                             <img src={copy} alt="Upload Icon" className="w-[30px] h-[30px]" />
                         </div>
                         <input
@@ -100,7 +100,7 @@ const Wallet = () => {
                     </div>
 
                     {/* Card Last 4 Digits Input */}
-                    <div className="relative flex items-center w-[683px] h-[60px] bg-[#F1F1F1] rounded-md px-4">
+                    <div className="relative flex items-center w-[683px] h-[60px] bg-[#F1F1F1] rounded-xl px-4">
                         <div className="flex-1 flex flex-row-reverse items-baseline gap-[24px] text-[#D9D9D9]">
                             <input
                                 type="text"
@@ -121,15 +121,15 @@ const Wallet = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className="absolute right-0 flex items-center justify-center w-[265px] h-[60px] bg-[#FF2A2A] text-white text-[14px] font-bold rounded-md">
+                        <button className="absolute right-0 flex items-center justify-center w-[265px] h-[60px] bg-[#FF2A2A] text-white text-[14px] font-bold rounded-xl">
                             4 رقم آخر شماره کارت وارد نمایید
                         </button>
                     </div>
                 </div>
 
                 <div className="p-4 flex flex-col items-center gap-4">
-                    <div className="flex items-center justify-between w-[1010px] h-[60px] bg-[#F1F1F1] rounded-md p-2">
-                        <div className="w-[313px] h-[60px] bg-[#565662] flex items-center justify-center rounded-md text-white text-[14px]">
+                    <div className="flex items-center justify-between w-[1010px] h-[60px] bg-[#F1F1F1] rounded-xl p-2">
+                        <div className="w-[313px] h-[60px] bg-[#565662] flex items-center justify-center rounded-xl text-white text-[14px]">
                             24 رقم شماره شبا کارت بانکی خود را وارد نمایید
                         </div>
 
@@ -155,14 +155,14 @@ const Wallet = () => {
                             ))}
                         </div>
 
-                        <div className="w-[65px] h-[60px] bg-[#262630] flex items-center justify-center rounded-md text-white text-[14px]">
+                        <div className="w-[65px] h-[60px] bg-[#262630] flex items-center justify-center rounded-xl text-white text-[14px]">
                             IR
                         </div>
                     </div>
 
                     {/* Updated Position of Submit Button */}
                     <div className="mt-2 w-[1020px] flex justify-start mr-3">
-                        <button className="w-[130px] h-[60px] bg-[#1FBC42] text-white text-[12px] font-bold rounded-md">
+                        <button className="w-[130px] h-[60px] bg-[#1FBC42] text-white text-[12px] font-bold rounded-xl">
                             ارسال اطلاعات
                         </button>
                     </div>
