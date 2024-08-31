@@ -32,6 +32,7 @@ const SideBar = () => {
                     <li className="flex items-center gap-[7px] p-2 text-[16px] font-bold cursor-pointer rounded-md bg-[#262630] text-white">
                         <img src={money} alt="Money Icon" className="w-[35px] h-[35px]" /> بخش مالی
                     </li>
+                    <div class="bg-[#262630] w-full rounded-xl px-3 py-4"><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">شارژ کیف پول</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">کارت به کارت</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">برداشت وجه</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">فاکتورها</li></a></div>
                     {/* Ticket Management Item */}
                     <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={ticket} alt="Tickets Icon" className="w-[35px] h-[35px]" /> مدیریت تیکت‌ها
