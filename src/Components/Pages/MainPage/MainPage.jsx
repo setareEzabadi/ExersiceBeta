@@ -6,7 +6,7 @@ const MainPage = () => {
     return (
         <div className="flex min-h-screen">
             {/* SideBar Section */}
-            <div className="w-64">
+            <div className="w-64 md:block hidden">
                 <SideBar />
             </div>
 
