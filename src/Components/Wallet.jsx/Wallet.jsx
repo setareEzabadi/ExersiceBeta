@@ -101,12 +101,14 @@ const Wallet = () => {
 
                     {/* Card Last 4 Digits Input */}
                     <div className="relative flex items-center w-[683px] h-[60px] bg-[#F1F1F1] rounded-md px-4">
-                        <input
-                            type="text"
-                            maxLength="4"
-                            placeholder="1628"
-                            className="w-[50px] bg-transparent text-center text-[#000] font-bold outline-none"
-                        />
+                        <div className="flex-1 flex flex-row-reverse items-baseline gap-[24px] text-[#D9D9D9]">
+                            <input
+                                type="text"
+                                maxLength="4"
+                                placeholder="1628"
+                                className="w-[50px] bg-transparent text-center text-[#000] font-bold outline-none"
+                            />
+                        </div>
                         <div className="flex-1 flex flex-row-reverse items-baseline gap-[24px] text-[#D9D9D9]">
                             {[...Array(3)].map((_, groupIndex) => (
                                 <div key={groupIndex} className="flex gap-[5px]">
