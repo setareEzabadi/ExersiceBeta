@@ -29,8 +29,8 @@ const SideBar = () => {
     return (
         <div className="bg-white h-full w-64 shadow-md flex flex-col p-4">
             {/* Header */}
-            <div className="flex flex-col items-center justify-center py-4 border-b">
-                <img src={logo} alt="Logo" className="w-[98px] h-[102px] mb-2" />
+            <div className="flex flex-col items-center justify-center py-2 border-b">
+                <img src={logo} alt="Logo" className="w-[80px] h-[85px] mb-2" />
                 <span className="text-[#343434] text-[20px] font-bold">ZARVANTRIP</span>
             </div>
 
