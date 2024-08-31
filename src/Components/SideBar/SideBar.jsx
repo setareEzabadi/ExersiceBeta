@@ -1,3 +1,4 @@
+import React, { useState, useRef, useEffect } from 'react';
 import logo from '../../Assets/img/Logo Zarvantrip.png';
 import dashboard from '../../Assets/img/dashboard.png';
 import rezerv from '../../Assets/img/rezerv.png';
@@ -7,8 +8,24 @@ import customer from '../../Assets/img/customer.png';
 import fave from '../../Assets/img/fave.png';
 import mine from '../../Assets/img/mine.png';
 import profile from '../../Assets/img/profile.png';
+import arowDown from '../../Assets/svg/arrow-square-downSideBar.svg';
+import './SideBar.css';
 
 const SideBar = () => {
+    const [isFinancialOpen, setIsFinancialOpen] = useState(false);
+    const [sectionHeight, setSectionHeight] = useState('0px');
+    const sectionRef = useRef(null);
+
+    const toggleFinancialSection = () => {
+        setIsFinancialOpen(!isFinancialOpen);
+    };
+
+    useEffect(() => {
+        if (sectionRef.current) {
+            setSectionHeight(isFinancialOpen ? `${sectionRef.current.scrollHeight}px` : '0px');
+        }
+    }, [isFinancialOpen]);
+
     return (
         <div className="bg-white h-full w-64 shadow-md flex flex-col p-4">
             {/* Header */}
@@ -29,10 +46,25 @@ const SideBar = () => {
                         <img src={rezerv} alt="Reservations Icon" className="w-[35px] h-[35px]" /> لیست رزرو من
                     </li>
                     {/* Financial Section Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[16px] font-bold cursor-pointer rounded-md bg-[#262630] text-white">
+                    <li
+                        className={`flex items-center gap-[7px] p-2 text-[16px] font-bold cursor-pointer rounded-md ${isFinancialOpen ? 'bg-[#262630] text-white' : 'bg-[#262630] text-white'}`}
+                        onClick={toggleFinancialSection}
+                    >
                         <img src={money} alt="Money Icon" className="w-[35px] h-[35px]" /> بخش مالی
                     </li>
-                    <div class="bg-[#262630] w-full rounded-xl px-3 py-4"><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">شارژ کیف پول</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">کارت به کارت</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">برداشت وجه</li></a><a class="text-[#7E7E7E] text-sm !my-2" href=""><li class="p-2">فاکتورها</li></a></div>
+                    {/* Financial Submenu */}
+                    <div
+                        ref={sectionRef}
+                        className="transition-height duration-500 ease-out overflow-hidden"
+                        style={{ height: sectionHeight }}
+                    >
+                        <div className="bg-[#262630] w-full rounded-xl px-3 py-4">
+                            <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">شارژ کیف پول</li></a>
+                            <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">کارت به کارت</li></a>
+                            <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">برداشت وجه</li></a>
+                            <a className="text-[#7E7E7E] text-sm !my-2" href="#"><li className="p-2">فاکتورها</li></a>
+                        </div>
+                    </div>
                     {/* Ticket Management Item */}
                     <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={ticket} alt="Tickets Icon" className="w-[35px] h-[35px]" /> مدیریت تیکت‌ها
