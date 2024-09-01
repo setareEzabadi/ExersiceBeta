@@ -27,7 +27,7 @@ const SideBar = () => {
     }, [isFinancialOpen]);
 
     return (
-        <div className="bg-white h-full w-64 shadow-md flex flex-col p-4">
+        <div className="bg-white h-full w-full md:w-64 shadow-md flex flex-col p-4">
             {/* Header */}
             <div className="flex flex-col items-center justify-center py-2 border-b">
                 <img src={logo} alt="Logo" className="w-[80px] h-[85px] mb-2" />
@@ -35,19 +35,19 @@ const SideBar = () => {
             </div>
 
             {/* Menu Items */}
-            <nav className="flex-1 mt-[15px] mb-[15px]">
-                <ul className="flex flex-col gap-[5px]">
+            <nav className="flex-1 mt-4 mb-4 overflow-y-scroll">
+                <ul className="flex flex-col gap-2">
                     {/* Dashboard Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={dashboard} alt="Dashboard Icon" className="w-[35px] h-[35px]" /> داشبورد
                     </li>
                     {/* Reservations List Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={rezerv} alt="Reservations Icon" className="w-[35px] h-[35px]" /> لیست رزرو من
                     </li>
                     {/* Financial Section Item */}
                     <li
-                        className={`flex items-center gap-[7px] p-2 text-[16px] font-bold cursor-pointer rounded-md ${isFinancialOpen ? 'bg-[#262630] text-white' : 'bg-[#262630] text-white'}`}
+                        className={`flex items-center gap-2 p-2 text-[16px] font-bold cursor-pointer rounded-md ${isFinancialOpen ? 'bg-[#262630] text-white' : 'bg-[#262630] text-white'}`}
                         onClick={toggleFinancialSection}
                     >
                         <img src={money} alt="Money Icon" className="w-[35px] h-[35px]" /> بخش مالی
@@ -69,26 +69,26 @@ const SideBar = () => {
                         </div>
                     </div>
                     {/* Ticket Management Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={ticket} alt="Tickets Icon" className="w-[35px] h-[35px]" /> مدیریت تیکت‌ها
                     </li>
                     {/* Customer Club Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={customer} alt="Customer Club Icon" className="w-[35px] h-[35px]" /> باشگاه مشتریان
                     </li>
                     {/* Favorites Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={fave} alt="Favorites Icon" className="w-[35px] h-[35px]" /> علاقه‌مندی‌های من
                     </li>
                     {/* My Passengers Item */}
-                    <li className="flex items-center gap-[7px] p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
+                    <li className="flex items-center gap-2 p-2 text-[#272727] text-[16px] font-bold cursor-pointer rounded-md hover:bg-[#262630] hover:text-white">
                         <img src={mine} alt="My Passengers Icon" className="w-[35px] h-[35px]" /> مسافران من
                     </li>
                 </ul>
             </nav>
 
             {/* Footer */}
-            <div className="flex flex-col items-center bg-[#D7D7D7] py-[13px] px-[32px] rounded-lg gap-[7px] mt-4">
+            <div className="flex flex-col items-center bg-[#D7D7D7] py-3 px-8 rounded-lg gap-2 mt-4">
                 <img
                     src={profile}
                     alt="User"
@@ -99,7 +99,7 @@ const SideBar = () => {
             </div>
 
             {/* Logout Button */}
-            <button className="w-full bg-[#FF2B2B] text-white py-[12px] mt-2 rounded">
+            <button className="w-full bg-[#FF2B2B] text-white py-3 mt-2 rounded">
                 خروج
             </button>
         </div>
