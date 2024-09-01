@@ -142,7 +142,7 @@ const Wallet = () => {
                             </div>
                             <div className="flex-1 flex flex-row-reverse items-baseline gap-[24px] text-[#D9D9D9]">
                                 {[...Array(3)].map((_, groupIndex) => (
-                                    <div key={groupIndex} className="flex gap-[15px]">
+                                    <div key={groupIndex} className="flex gap-[5px]">
                                         {[...Array(4)].map((_, index) => (
                                             <span
                                                 key={index}
@@ -198,7 +198,7 @@ const Wallet = () => {
                                 {[...Array(2)].map((_, rowIndex) => (
                                     <div key={rowIndex} className="flex gap-[5px]">
                                         {[...Array(3)].map((_, groupIndex) => (
-                                            <div key={groupIndex} className="flex gap-[15px]">
+                                            <div key={groupIndex} className="flex gap-[5px]">
                                                 {[...Array(4)].map((_, index) => (
                                                     <input
                                                         key={index}
