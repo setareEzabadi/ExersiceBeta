@@ -16,7 +16,7 @@ const MainPage = () => {
                 <Header />
 
                 {/* Main Outlet Content */}
-                <div className="mt-4 p-4 bg-white shadow-md rounded-lg">
+                <div className="mt-4 p-4 bg-white shadow-md rounded-lg overflow-x-hidden">
                     <Outlet />
                 </div>
             </div>
