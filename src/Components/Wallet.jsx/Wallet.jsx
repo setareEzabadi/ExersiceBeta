@@ -226,7 +226,7 @@ const Wallet = () => {
                 </div>
                 {/* Updated Position of Submit Button */}
                 <div className="mt-2 w-full flex justify-start max-w-[1024px] mx-auto">
-                    <button className="w-full md:w-[130px] md:h-[45px] h-[45px] w-[120px] bg-[#1FBC42] text-white text-[14px] font-bold rounded-xl">
+                    <button className="md:w-[130px] md:h-[45px] h-[45px] w-[120px] bg-[#1FBC42] text-white text-[14px] font-bold rounded-xl">
                         ارسال اطلاعات
                     </button>
                 </div>
