@@ -4,9 +4,9 @@ import SideBar from "../../SideBar/SideBar";
 
 const MainPage = () => {
     return (
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen flex-col md:flex-row">
             {/* SideBar Section */}
-            <div className="w-64 md:block hidden">
+            <div className="w-full md:w-64 h-[100vh] md:block hidden">
                 <SideBar />
             </div>
 
